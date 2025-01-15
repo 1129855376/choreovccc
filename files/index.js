@@ -22,6 +22,7 @@ const metaInfo = execSync(
 );
 const ISP = metaInfo.trim();
 
+
 // sub subscription
 app.get('/sub', (req, res) => {
   const VMESS = { v: '2', ps: `${NAME}-${ISP}`, add: CFIP, port: '8443', id: UUID, aid: '0', scy: 'none', net: 'ws', type: 'none', host: ARGO_DOMAIN, path: '/vmess?ed=2048', tls: 'tls', sni: ARGO_DOMAIN, alpn: '' };
